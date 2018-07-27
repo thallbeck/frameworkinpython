@@ -1,4 +1,6 @@
 import inspect
+import time
+from enum import Enum
 
 class General:
     silent_mode = False
@@ -39,8 +41,11 @@ class General:
                 print(string)
         return True
 
-
-
+    def sleep(self, time_in_seconds):
+        if not (self.get_silent_mode()):
+            self.debug('sleeping thread', False)
+        time.sleep(time_in_seconds)
+        return True
 
 
 
@@ -50,6 +55,7 @@ class General:
         self.get_stack_depth()
         self.debug('single string test', False)
         self.debug(('multiple', 'string', 'test'), False)
+        self.sleep(1)
 
 
 
