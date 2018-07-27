@@ -1,6 +1,7 @@
 import inspect
 import time
 from enum import Enum
+import platform
 
 class General:
     silent_mode = False
@@ -47,6 +48,14 @@ class General:
         time.sleep(time_in_seconds)
         return True
 
+    def get_os(self):
+        self.debug( 'raw os name is ' + platform.system(), False )
+        if ( platform.system().startswith( "Windows" ) ):
+            return OS.Windows
+        elif ( platform.system().startswith( "Linux" ) ):
+            return OS.Linux
+        return OS.Mac
+
 
 
     def run_unit_tests(self):
@@ -56,8 +65,13 @@ class General:
         self.debug('single string test', False)
         self.debug(('multiple', 'string', 'test'), False)
         self.sleep(1)
+        self.get_os()
 
 
+class OS(Enum):
+    Mac = 1
+    Windows = 2
+    Linux = 3
 
 
 

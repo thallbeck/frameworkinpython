@@ -11,6 +11,9 @@ universal.debug('\nstarting the test', False)
 some_strings = ('string1', 'string2', 'string3')
 universal.debug(some_strings, False)
 
+print list(general.OS)
+print 'this OS is ' + str(universal.get_os())
+
 binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
 driver = webdriver.Firefox(firefox_binary=binary, executable_path='C:\\Users\\Public\\Documents\\testautomation\\geckodriver.exe')
 driver.get("http://www.facebook.com")
