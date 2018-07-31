@@ -74,4 +74,3 @@ class OS(Enum):
     Linux = 3
 
 
-
