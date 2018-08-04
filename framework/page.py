@@ -23,4 +23,7 @@ class page:
     def get(self):
         placeholder = 1
 
+    def load(self):
+        placeholder = 1
+
 
