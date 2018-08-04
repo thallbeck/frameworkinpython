@@ -4,6 +4,17 @@ import environment
 
 class LoginType(Enum):
 
+    DEFAULT = (
+        "",
+        environment.Environment.Prod,
+        "",
+        "",
+        "",
+        "",
+        "",
+        "https://www.google.com"
+        )
+
     SAMPLE_MOVIEDB = (
         "",
         environment.Environment.Prod,

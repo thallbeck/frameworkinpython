@@ -16,7 +16,7 @@ print list(general.OS)
 print 'this OS is ' + str(universal.get_os())
 
 a_movie_db = logintype.LoginType.SAMPLE_CARBONBLACK
-print a_movie_db
+print a_movie_db.startingUrl
 
 binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe')
 driver = webdriver.Firefox(firefox_binary=binary, executable_path='C:\\Users\\Public\\Documents\\testautomation\\geckodriver.exe')

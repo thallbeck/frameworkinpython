@@ -1,8 +1,10 @@
+from enum import Enum
 from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 import general
 import logintype
+import browser
 
 class page:
 
@@ -17,4 +19,8 @@ class page:
         driver = None
 
         standardPageSleep = 2
+
+    def get(self):
+        placeholder = 1
+
 
